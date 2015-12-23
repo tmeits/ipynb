@@ -2,7 +2,8 @@ gcc.exe -c main.c fann.c  fann_error.c fann_train.c fann_train_data.c fann_casca
 gcc.exe  main.o fann.o  fann_error.o fann_train.o fann_train_data.o fann_cascade.o fann_io.o -o main
 ar rc libfann.a fann.o  fann_error.o fann_train.o fann_train_data.o fann_cascade.o fann_io.o
 ranlib libfann.a
-main.exe
+gcc xor_train.c -L. -lfann -o xor_train
+xor_train.exe
  
 
 C:\git\vs-fann>gcc.exe -c main.c fann.c  fann_error.c fann_train.c fann_train_data.c fann_cascade.c fann_io.c 
